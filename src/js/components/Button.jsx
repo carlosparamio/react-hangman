@@ -7,7 +7,7 @@ class Button extends React.Component {
     onClick: PropTypes.func
   }
 
-  static defaultProps= {
+  static defaultProps = {
     active: true
   }
 

@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import Text from '../components/Text';
+import SpacedText from '../components/SpacedText';
 
 const mapStateToProps = (state, ownProps) => ({
   text: state.guessedWord
 });
 
-const GuessedWord = connect(mapStateToProps)(Text);
+const GuessedWord = connect(mapStateToProps)(SpacedText);
 
 export default GuessedWord;
