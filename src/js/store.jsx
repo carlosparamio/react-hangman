@@ -5,9 +5,9 @@ import { loadState, saveState } from './localStorage';
 const defaultState = {
   word: undefined,
   guessedWord: undefined,
-  attemptedLetters: []
+  attemptedLetters: [],
+  failedAttempts: 0
 }
-
 
 const initialState = loadState() || defaultState;
 

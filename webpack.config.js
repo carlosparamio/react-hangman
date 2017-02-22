@@ -21,6 +21,11 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'stage-2', 'react']
                 }
+            },
+            {
+                test: /\.(png|gif|jpe?g)$/,
+                include: path.join(__dirname, 'src'),
+                loader: 'file-loader?name=img/[name]-[hash].[ext]'
             }
         ]
     },

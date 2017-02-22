@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import { tryLetter } from '../actions';
 import Button from '../components/Button';
-import { letterAlreadyAttempted } from '../helpers';
+import { wasLetterAlreadyAttempted } from '../helpers';
 
 const mapStateToProps = (state, ownProps) => ({
-  active: !letterAlreadyAttempted(state.attemptedLetters, ownProps.label)
+  active: !wasLetterAlreadyAttempted(state.attemptedLetters, ownProps.label)
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

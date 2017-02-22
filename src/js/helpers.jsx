@@ -1,9 +1,13 @@
 export const generateGuessedWord = (word, letters) => {
   return word.split("").map((letter) => {
-    return letterAlreadyAttempted(letters, letter) ? letter : "_"
+    return wasLetterAlreadyAttempted(letters, letter) ? letter : "_"
   }).join("")
 }
 
-export const letterAlreadyAttempted = (attemptedLetters, letter) => {
+export const wasLetterAlreadyAttempted = (attemptedLetters, letter) => {
   return attemptedLetters.indexOf(letter) >= 0
+}
+
+export const isLetterPresentAtWord = (word, letter) => {
+  return word.indexOf(letter) >= 0
 }
