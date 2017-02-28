@@ -1,6 +1,8 @@
+import store from 'store';
+
 export const loadState = () => {
   try {
-    const serializedState = localStorage.getItem('hangman');
+    const serializedState = store.get('hangman');
     if (serializedState === null) {
       return undefined;
     }
@@ -13,7 +15,7 @@ export const loadState = () => {
 export const saveState = (state) => {
   try {
     const serializedState = JSON.stringify(state);
-    localStorage.setItem('hangman', serializedState);
+    store.set('hangman', serializedState);
   } catch (err) {
     // Ignore errors
   }
